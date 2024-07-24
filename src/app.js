@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+require('./db/connection')
 let port = process.env.port || 3000
 
 app.get('/', (req,res) =>{

@@ -1,16 +1,18 @@
 {
   "name": "restful-api",
   "version": "1.0.0",
-  "description": "a project",
-  "main": "src/app.js",
+  "description": "",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "execute": "node src/app.js",
-    "nodemonExec": "nodemon src/app.js"
+    "dev": "node src/app.js",
+    "dev2": "nodemon src/app.js"
   },
-  "author": "adarsh jha",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "mongoose": "^8.5.1"
   }
 }
