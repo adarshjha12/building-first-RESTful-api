@@ -7,7 +7,6 @@ const userSchema = new mongoose.Schema({
     title:{
         type: String,
         required: true,
-        unique: true,
         minlength: 2
     },
 
@@ -24,7 +23,7 @@ const userSchema = new mongoose.Schema({
     },
 
     phone:{
-        type: Number,
+        type: String,
         required: true,
         unique: true,
         validate(value){
@@ -32,7 +31,16 @@ const userSchema = new mongoose.Schema({
                 throw new Error('invalid mobile no.')
             }
         }
+    },
+
+    address:{
+        type: String,
+        required: true
     }
 })
 
-// creating
+// creating collection
+
+let User = mongoose.model('User', userSchema)
+
+module.exports = User
